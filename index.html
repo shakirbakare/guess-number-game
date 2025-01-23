@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="sass/style.css" />
+  </head>
+  <body>
+    <div class="guess-game">
+      <h1 class="guess-game__headline">Guess the number</h1>
+      <p class="guess-game__secret-number">?</p>
+
+      <div class="container">
+        <div>
+          <input type="number" class="guess-game__input" placeholder="0" />
+          <button class="guess-game__button">Check</button>
+        </div>
+        <div>
+          <p class="guess-game__feedback">
+            Enter a number <span>between 1 - 20</span>
+          </p>
+          <p class="scores">
+            Scores: <span class="guess-game__scores">10</span>
+          </p>
+          <p>High Scores: <span class="guess-game__high-scores">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
