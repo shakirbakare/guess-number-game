@@ -6,7 +6,7 @@
   box-sizing: inherit;
 }
 
-@mixin respond-to-mobile {
+@mixin respond-mobile {
   @media (max-width: 726px) {
     @content;
   }
