@@ -11,6 +11,8 @@ secretNumber.textContent = randomNum;
 let scores = 20;
 let highScores = 0;
 
+const playAgainBtn = document.querySelector(".play-again");
+
 const gameLogic = function () {
   const userInput = Number(document.querySelector(".guess-game__input").value);
 
