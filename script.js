@@ -1,6 +1,7 @@
 "use strict";
 
 const userScores = document.querySelector(".guess-game__scores");
+const background = document.querySelector(".gusess-game");
 
 const secretNumber = document.querySelector(".guess-game__secret-number");
 
@@ -14,18 +15,26 @@ const gameLogic = function () {
 
   if (!userInput) {
     inputFeedback.textContent = "No number!";
-  } else if (userInput > randomNum) {
-    inputFeedback.textContent = "Too high";
-    scores--;
-    userScores.textContent = scores;
-  } else if (userInput < randomNum) {
-    inputFeedback.textContent = "Too low";
-    scores--;
-    userScores.textContent = scores;
   } else if (userInput === randomNum) {
     inputFeedback.textContent = winMessage;
-    scores++;
-    userScores.textContent = scores;
+  } else if (userInput > randomNum) {
+    if (scores > 1) {
+      inputFeedback.textContent = "Too high";
+      scores--;
+      userScores.textContent = scores;
+    } else {
+      inputFeedback.textContent = "You lost the game!";
+      userScores.textContent = 0;
+    }
+  } else if (userInput < randomNum) {
+    if (scores > 1) {
+      inputFeedback.textContent = "Too low";
+      scores--;
+      userScores.textContent = scores;
+    } else {
+      inputFeedback.textContent = "You lost the game!";
+      userScores.textContent = 0;
+    }
   }
 };
 
