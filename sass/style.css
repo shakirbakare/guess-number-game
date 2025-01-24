@@ -78,10 +78,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+.guess-game .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+  padding: 3rem;
+}
 .guess-game__input {
   display: block;
   padding: 2rem;
-  width: 12rem;
+  width: 100%;
   font-size: 3rem;
   font-weight: 600;
   border: none;
@@ -89,6 +96,7 @@ body {
   margin-bottom: 2rem;
   text-align: center;
   border-bottom: 0.2rem solid #000;
+  align-self: center;
 }
 .guess-game__input::-moz-placeholder {
   color: #999;

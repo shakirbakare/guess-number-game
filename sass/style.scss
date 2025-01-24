@@ -88,10 +88,20 @@ body {
     align-items: center;
   }
 
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 2rem;
+    width: 50%;
+    padding: 3rem;
+  }
+
   &__input {
     display: block;
     padding: 2rem;
-    width: 12rem;
+    // width: 12rem;
+    width: 100%;
     font-size: 3rem;
     font-weight: 600;
     border: none;
@@ -99,6 +109,7 @@ body {
     margin-bottom: 2rem;
     text-align: center;
     border-bottom: 0.2rem solid #000;
+    align-self: center;
 
     &::placeholder {
       color: #999;
