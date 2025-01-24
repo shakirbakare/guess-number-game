@@ -24,9 +24,9 @@ body {
 
 .guess-game {
   background: #f9f9f9;
-  width: 50rem;
+  width: 60rem;
   margin: 10rem auto;
-  padding: 6rem 4rem;
+  padding: 8rem;
   border-radius: 2rem;
 }
 @media (max-width: 726px) {
@@ -74,7 +74,7 @@ body {
 }
 .guess-game .container {
   display: flex;
-  gap: 5rem;
+  gap: 7rem;
   justify-content: center;
   align-items: center;
 }
@@ -83,7 +83,9 @@ body {
   flex-direction: column;
   gap: 2rem;
   width: 50%;
-  padding: 3rem;
+}
+.guess-game .feedback-container {
+  width: 50%;
 }
 .guess-game__input {
   display: block;
@@ -95,7 +97,6 @@ body {
   outline: none;
   margin-bottom: 2rem;
   text-align: center;
-  border-bottom: 0.2rem solid #000;
   align-self: center;
 }
 .guess-game__input::-moz-placeholder {

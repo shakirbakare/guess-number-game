@@ -29,9 +29,9 @@ body {
 
 .guess-game {
   background: #f9f9f9;
-  width: 50rem;
+  width: 60rem;
   margin: 10rem auto;
-  padding: 6rem 4rem;
+  padding: 8rem;
   border-radius: 2rem;
 
   @include respond-mobile() {
@@ -83,7 +83,7 @@ body {
 
   .container {
     display: flex;
-    gap: 5rem;
+    gap: 7rem;
     justify-content: center;
     align-items: center;
   }
@@ -94,7 +94,10 @@ body {
     // align-items: center;
     gap: 2rem;
     width: 50%;
-    padding: 3rem;
+  }
+
+  .feedback-container {
+    width: 50%;
   }
 
   &__input {
@@ -108,7 +111,6 @@ body {
     outline: none;
     margin-bottom: 2rem;
     text-align: center;
-    border-bottom: 0.2rem solid #000;
     align-self: center;
 
     &::placeholder {
