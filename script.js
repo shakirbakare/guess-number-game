@@ -49,6 +49,16 @@ const gameLogic = function () {
   }
 };
 
+const playAgainLogic = function () {
+  highScores = scores;
+  userHighScores.textContent = highScores;
+  background.style.backgroundColor = "#f9f9f9";
+
+  secretNumber.style.width = "12rem";
+  secretNumber.style.borderBottom = "none";
+  inputFeedback.textContent = "Enter a number";
+};
+
 const inputFeedback = document.querySelector(".guess-game__feedback");
 
 const winMessage = "You won!";
@@ -58,3 +68,4 @@ const userHighScores = document.querySelector(".guess-game__high-scores");
 const checkBtn = document.querySelector(".guess-game__button");
 
 checkBtn.addEventListener("click", gameLogic);
+playAgainBtn.addEventListener("click", playAgainLogic);
