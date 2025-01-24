@@ -9,6 +9,7 @@ const randomNum = Math.floor(Math.random() * 20) + 1;
 
 secretNumber.textContent = randomNum;
 let scores = 10;
+let highScores = 0;
 
 const gameLogic = function () {
   const userInput = Number(document.querySelector(".guess-game__input").value);
@@ -17,6 +18,9 @@ const gameLogic = function () {
     inputFeedback.textContent = "No number!";
   } else if (userInput === randomNum) {
     inputFeedback.textContent = winMessage;
+    if (scores > highScores) {
+      userHighScores.textContent = scores;
+    }
   } else if (userInput > randomNum) {
     if (scores > 1) {
       inputFeedback.textContent = "Too high";
