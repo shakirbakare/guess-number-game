@@ -20,6 +20,7 @@ const gameLogic = function () {
     inputFeedback.textContent = winMessage;
     background.style.backgroundColor = "#0f0";
     if (scores > highScores) {
+      highScores = scores;
       userHighScores.textContent = scores;
     }
   } else if (userInput > randomNum) {
