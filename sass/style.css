@@ -37,9 +37,9 @@ body {
 .guess-game .play-again {
   display: block;
   padding: 1.6rem 3.2rem;
-  color: #fff;
-  background: #000;
-  border: none;
+  color: #000;
+  background: transparent;
+  border: 2px solid #000;
   font-size: 1.8rem;
   font-weight: 600;
   font-family: inherit;
@@ -48,8 +48,10 @@ body {
   border-radius: 0.4rem;
 }
 .guess-game .play-again:hover {
+  background: #000;
   transform: translateY(0.2rem);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 .guess-game .play-again:active {
   transform: translateY(0.4rem);
