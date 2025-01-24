@@ -34,6 +34,27 @@ body {
     width: 100%;
   }
 }
+.guess-game .play-again {
+  display: block;
+  padding: 1.6rem 3.2rem;
+  color: #fff;
+  background: #000;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0.4rem;
+}
+.guess-game .play-again:hover {
+  transform: translateY(0.2rem);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+.guess-game .play-again:active {
+  transform: translateY(0.4rem);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
 .guess-game__headline {
   font-size: 3.6rem;
   text-align: center;

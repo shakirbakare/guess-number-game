@@ -16,7 +16,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 
-  @include respond-to-mobile() {
+  @include respond-mobile() {
     font-size: 50%;
   }
 }
@@ -34,8 +34,32 @@ body {
   padding: 6rem 4rem;
   border-radius: 2rem;
 
-  @include respond-to-mobile() {
+  @include respond-mobile() {
     width: 100%;
+  }
+
+  .play-again {
+    display: block;
+    padding: 1.6rem 3.2rem;
+    color: #fff;
+    background: #000;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0.4rem;
+    &:hover {
+      // background: hsl(0, 0%, 15%);
+      transform: translateY(0.2rem);
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(0.4rem);
+      box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    }
   }
 
   &__headline {
