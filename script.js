@@ -19,6 +19,9 @@ const gameLogic = function () {
   } else if (userInput === randomNum) {
     inputFeedback.textContent = winMessage;
     background.style.backgroundColor = "#0f0";
+    secretNumber.style.width = "50%";
+    secretNumber.style.borderBottom = "4px solid #000";
+
     if (scores > highScores) {
       highScores = scores;
       userHighScores.textContent = scores;
