@@ -59,6 +59,7 @@ const playAgainLogic = function () {
   secretNumber.style.width = "12rem";
   secretNumber.style.borderBottom = "none";
   inputFeedback.textContent = "Enter a number";
+  userInput = "";
 };
 
 const inputFeedback = document.querySelector(".guess-game__feedback");
