@@ -5,9 +5,11 @@ const background = document.querySelector(".guess-game");
 
 const secretNumber = document.querySelector(".guess-game__secret-number");
 
-const randomNum = Math.floor(Math.random() * 20) + 1;
+const randomNum = function () {
+  return Math.floor(Math.random() * 20) + 1;
+};
 
-secretNumber.textContent = randomNum;
+secretNumber.textContent = randomNum();
 let scores = 20;
 let highScores = 0;
 
@@ -18,7 +20,7 @@ const gameLogic = function () {
 
   if (!userInput) {
     inputFeedback.textContent = "No number!";
-  } else if (userInput === randomNum) {
+  } else if (userInput === randomNum()) {
     inputFeedback.textContent = winMessage;
     background.style.backgroundColor = "#0f0";
     secretNumber.style.width = "50%";
@@ -28,7 +30,7 @@ const gameLogic = function () {
       highScores = scores;
       userHighScores.textContent = scores;
     }
-  } else if (userInput > randomNum) {
+  } else if (userInput > randomNum()) {
     if (scores > 1) {
       inputFeedback.textContent = "Too high";
       scores--;
@@ -37,7 +39,7 @@ const gameLogic = function () {
       inputFeedback.textContent = "You lost the game!";
       userScores.textContent = 0;
     }
-  } else if (userInput < randomNum) {
+  } else if (userInput < randomNum()) {
     if (scores > 1) {
       inputFeedback.textContent = "Too low";
       scores--;
